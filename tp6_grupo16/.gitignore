@@ -5,3 +5,6 @@
 bin/
 out/
 target/
+.classpath
+.project
+.settings/
