@@ -49,6 +49,10 @@ public class Producto {
     public void setOrigenFabricacion(String origenFabricacion) {
         this.origenFabricacion = origenFabricacion;
     }
+    
+    public boolean verificacionNacional() {
+    	return origenFabricacion.equalsIgnoreCase("Argentina");
+    }
 
     @Override
     public String toString() {
