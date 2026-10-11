@@ -49,12 +49,12 @@ public class Credito {
 	}
 	
 	public void generarCuotas() {
-		double montoCuota = this.factura.calcularTotal() / 30;
+		double montoCuota = this.factura.calcularTotal() / 20;
 		int nroCuota = 0;
 		LocalDate currentDate = LocalDate.now();
 		LocalDate auxDate = LocalDate.now();
 
-		for (int i = 0; i < 30; i++) {
+		for (int i = 0; i < 20; i++) {
 			nroCuota++;
 			Cuota cuota = new Cuota();
 			cuota.setMonto(montoCuota);
