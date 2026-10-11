@@ -63,6 +63,16 @@ public class Factura {
         }
         return total;
     }
+    
+    public boolean VerificarFecha(LocalDate fecha) {
+    	LocalDate PromoVencida = LocalDate.of(2026, 12, 22);
+    	
+    	if(fecha.isAfter(PromoVencida)) {
+    		return true;
+    	}else {
+    		return false;
+    	}
+    }
 
     @Override
     public String toString() {

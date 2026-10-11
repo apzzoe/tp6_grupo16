@@ -29,10 +29,24 @@ public class Main {
 
             System.out.println("Ingrese su opcion: ");
             opcion = scanner.nextInt();
+            
+            switch(opcion) {
+            case 1: 
+            	
+            	new MenuVenta(scanner).realizarVenta();
+            	
+            	break;
+            case 2: 
+            
+            }
 
         }while(opcion != 6);
+        
+        
         scanner.close();
 
 	}
+	
+	
 
 }
