@@ -53,7 +53,25 @@ public class Producto {
     public boolean verificacionNacional() {
     	return origenFabricacion.equalsIgnoreCase("Argentina");
     }
+    
+    public String tipoProducto(){
+ 
+        String d = descripcion.toLowerCase();
+        
+        if (d.startsWith("aire acondicionado")) {
+        	return "Aire acondicionado"; }
+        if (d.startsWith("celular")) {
+        	return "Celular"; }
+        if (d.startsWith("heladera")) {
+        	return "Heladera"; }
+        if (d.startsWith("lavarropa")) {
+        	return "Lavarropas"; }
+        if (d.startsWith("televisor")) {
+        	return "Televisor"; }
 
+        return "otro";
+    }
+    
     @Override
     public String toString() {
         return "Codigo: " + codigo + " Descripcion: " + descripcion + " Precio Unitario: " + precioUnitario
