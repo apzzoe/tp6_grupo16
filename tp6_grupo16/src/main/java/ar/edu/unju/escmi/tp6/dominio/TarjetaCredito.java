@@ -55,6 +55,10 @@ public class TarjetaCredito {
 	public double getLimiteCompra() {
 		return limiteCompra;
 	}
+	
+	public boolean limiteValido(double monto) {
+	    return monto <= this.limiteCompra;
+	}
 
 	
 	@Override

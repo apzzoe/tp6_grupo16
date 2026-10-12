@@ -27,4 +27,8 @@ public class Stock {
     public void setProducto(Producto producto) {
         this.producto = producto;
     }
+    
+    public boolean hayStock(int cantPedida) {
+        return cantPedida > 0 && cantPedida <= this.cantidad;
+    }
 }
