@@ -17,6 +17,9 @@ public class Main {
         CollectionTarjetaCredito.precargarTarjetas();
         CollectionProducto.precargarProductos();
         CollectionStock.precargarStocks();
+        
+        MenuStock menuStock = new MenuStock(scanner);
+        
         int opcion = 0;
         do {
         	System.out.println("\n====== Menu Principal =====");
@@ -36,17 +39,29 @@ public class Main {
             	new MenuVenta(scanner).realizarVenta();
             	
             	break;
+            	
             case 2: 
+            break;
             
+            case 3:
+            	break;
+            
+            case 4:
+            menuStock.consultarStock();
+            break;
+            
+            case 5:
+            	break;
+            	
+            case 6:
+                System.out.println("Saliendo del sistema...");
+                break;
+                
+            default:
+                System.out.println("Opción inválida. Intente de nuevo.");
             }
-
         }while(opcion != 6);
         
-        
         scanner.close();
-
 	}
-	
-	
-
 }
