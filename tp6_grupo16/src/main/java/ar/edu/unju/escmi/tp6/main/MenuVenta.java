@@ -64,7 +64,6 @@ public class MenuVenta {
             	ingresarFecha();
             	break;
             case 3:
-            	System.out.println("Ingrese el código del producto que desea agregar: ");
             	sumarProducto();
             	break;
             case 4: 
@@ -101,6 +100,7 @@ public class MenuVenta {
 	}
 	
 	private void ingresarFecha() {
+		scanner.nextLine();
 		System.out.println("Ingrese la fecha de la compra (dd/mm/yyyy): ");
 		String texto = scanner.nextLine().trim();
  
