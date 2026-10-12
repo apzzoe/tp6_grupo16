@@ -12,11 +12,6 @@ public class Cliente {
 	private String direccion;
 	private String telefono;
 	
-	public Cliente() {
-
-	}
-
-
 	public Cliente(long dni, String nombre, String direccion, String telefono) {
 		super();
 		this.dni = dni;
@@ -24,8 +19,6 @@ public class Cliente {
 		this.direccion = direccion;
 		this.telefono = telefono;
 	}
-
-
 
 	public long getDni() {
 		return dni;
@@ -60,6 +53,7 @@ public class Cliente {
 	public void setTelefono(String telefono) {
 		this.telefono = telefono;
 	}
+	
 
 	public List<Factura> consultarCompras() {
 		List<Factura> shoppingList = new ArrayList<Factura>();

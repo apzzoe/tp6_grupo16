@@ -5,8 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Credito {
-	private int Max_general = 2500000;
-	private int Max_celular = 1000000;
 
 	private TarjetaCredito tarjetaCredito;
 	private Factura factura;
