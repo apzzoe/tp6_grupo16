@@ -19,6 +19,7 @@ public class Main {
         CollectionStock.precargarStocks();
         
         MenuStock menuStock = new MenuStock(scanner);
+        MenuCredito menuCredito = new MenuCredito(scanner);
         
         int opcion = 0;
         do {
@@ -51,6 +52,7 @@ public class Main {
             break;
             
             case 5:
+            	menuCredito.revisarCreditosCliente();
             	break;
             	
             case 6:
