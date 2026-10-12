@@ -59,7 +59,11 @@ public class TarjetaCredito {
 	public boolean limiteValido(double monto) {
 	    return monto <= this.limiteCompra;
 	}
-
+	
+	public boolean tarjetaVencida(LocalDate fechaCompra) {
+	    return fechaCaducacion.isBefore(fechaCompra);
+	}
+	
 	
 	@Override
 	public String toString() {
