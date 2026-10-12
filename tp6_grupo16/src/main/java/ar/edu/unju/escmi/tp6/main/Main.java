@@ -6,6 +6,9 @@ import ar.edu.unju.escmi.tp6.collections.CollectionCliente;
 import ar.edu.unju.escmi.tp6.collections.CollectionProducto;
 import ar.edu.unju.escmi.tp6.collections.CollectionStock;
 import ar.edu.unju.escmi.tp6.collections.CollectionTarjetaCredito;
+import ar.edu.unju.escmi.tp6.collections.CollectionFactura;
+import ar.edu.unju.escmi.tp6.dominio.Cliente;
+import ar.edu.unju.escmi.tp6.dominio.Factura;
 
 public class Main {
 	
@@ -42,6 +45,7 @@ public class Main {
             	break;
             	
             case 2: 
+            	revisarCompras();
             break;
             
             case 3:
@@ -65,5 +69,36 @@ public class Main {
         }while(opcion != 6);
         
         scanner.close();
+	}
+	
+	private static void revisarCompras() {
+		System.out.println("Ingresar el DNI del cliente: ");
+		long dni=0;
+		try {
+		dni=scanner.nextLong();
+		}catch(Exception e) {
+			scanner.next();
+		}
+		
+		Cliente cliente=CollectionCliente.buscarCliente(dni);
+		if(cliente == null) {
+			System.out.println("Cliente no registrado");
+			}
+		
+		boolean hayCompras = false;
+		for (Factura factura : CollectionFactura.facturas) {
+			if (factura.getCliente().getDni() == dni) {
+				System.out.println(factura);
+				System.out.println("Total de la compra: " + factura.calcularTotal());
+				hayCompras = true;
+			}
+		}
+
+		if (!hayCompras) {
+			if(cliente != null)
+			System.out.println("El cliente " + cliente.getNombre() + " no tiene compras registradas.");
+		}
+		
+		
 	}
 }
