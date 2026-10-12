@@ -17,6 +17,7 @@ public class Credito {
 		this.tarjetaCredito = tarjetaCredito;
 		this.factura = factura;
 		this.cuotas = cuotas;
+		
 		generarCuotas();
 	}
 
@@ -47,6 +48,11 @@ public class Credito {
 	public void setCuotas(List<Cuota> cuotas) {
 		this.cuotas = cuotas;
 	}
+	
+	public boolean montoValido() {
+	    return factura.montoValido();
+	}
+	
 	
 	public void generarCuotas() {
 		double montoCuota = this.factura.calcularTotal() / 20;

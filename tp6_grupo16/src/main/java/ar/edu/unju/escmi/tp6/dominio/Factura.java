@@ -64,6 +64,16 @@ public class Factura {
         return total;
     }
     
+    public boolean montoValido() {
+        double totalCelulares = 0;
+        for (Detalle detalle : detalles) {
+            if (detalle.getProducto().tipoProducto().equals("Celular")) {
+                totalCelulares += detalle.getImporte();
+            }
+        }
+        return calcularTotal() <= 2500000 && totalCelulares <= 1000000;
+    }
+    
     public boolean promocionVencida(LocalDate fecha) {
     	LocalDate PromoVencida = LocalDate.of(2026, 12, 22);
     	
