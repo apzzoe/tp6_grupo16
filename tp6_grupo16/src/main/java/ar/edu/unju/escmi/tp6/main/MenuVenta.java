@@ -201,7 +201,7 @@ public class MenuVenta {
 			if (factura.promocionVencida(fecha)) {
 				throw new Exception("El programa Ahora 20 ya no está en vigencia.");
 			}
-			if (factura.montoValido()) {
+			if (!factura.montoValido()) {
 				throw new Exception("El total supera el límite permitido por el programa.");
 			}
 			if (!tarjeta.limiteValido(factura.calcularTotal())) {
