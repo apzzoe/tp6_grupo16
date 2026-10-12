@@ -64,7 +64,7 @@ public class Factura {
         return total;
     }
     
-    public boolean VerificarFecha(LocalDate fecha) {
+    public boolean PromocionVencida(LocalDate fecha) {
     	LocalDate PromoVencida = LocalDate.of(2026, 12, 22);
     	
     	if(fecha.isAfter(PromoVencida)) {
