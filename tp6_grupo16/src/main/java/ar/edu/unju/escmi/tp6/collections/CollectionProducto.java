@@ -80,4 +80,14 @@ public class CollectionProducto {
 	        
 	        return productoEncontrado;
 	    }
+	    
+	    public static void mostrarProductos() {
+	        if (productos.isEmpty()) {
+	            System.out.println("No hay productos registrados.");
+	            return;
+	        }
+	        for (Producto p : productos) {
+	            System.out.println(p);
+	        }
+	    }
 }
