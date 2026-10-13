@@ -1,0 +1,26 @@
+GRUPO 16 - TP6
+Alumnas:
+Butron Lujan
+Melina Leaño
+Rios Josefina
+Villena Luisana
+Zelaya Apaza Zoe
+
+4.- Responda las siguientes preguntas: 
+a) ¿Por qué no se dibuja la relación de agregación entre la clase CollectionProducto y Producto? 
+No se dibuja la flecha de agregación físicamente entre CollectionProducto y Producto debido a que la relación ya está expresada como atributo, publico y estático, dentro de la clase con su multiplicidad. Por  lo que dibujar la flecha sería una repetición innecesaria de la información.
+
+b) ¿Cuántos atributos tiene la clase Factura? ¿Cuáles son los nombres de esos atributos? 
+La clase factura, además de sus dos atributos propios definidos, fecha y nroFactura, guarda atreves de la relación de agregación, con Cliente, el atributo cliente y, por medio de su relación de composición con Detalle, el atributo detalles. Por lo que cuenta con 4 atributos.
+
+c) ¿Cómo se llama la relación que se establece entre Factura y Detalle? 
+La relación que existe desde Factura hacia Detalle, se trata de una relación de composición.
+
+d) ¿Cómo se llama la relación entre las clases Factura y Cliente? 
+La relación que existe desde Cliente hacia Factura, se trata de una relación de agregación.
+
+e) ¿Por qué los atributos de las clases Collections son públicos? 
+Los atributos de las clases Collections, son definidos como atributos públicos, para que las demás clases del programa puedan acceder a las listas de manera directa.
+
+f) Describa las características de todos los métodos de la clase CollectionClientes.
+La clase CollectionProducto cuenta con tres métodos públicos y estáticos, ya que son métodos de la propia clase que no dependen de ningún objeto creado, sino que trabajan con la lista de Productos independientemente, estos son: precargarClientes(), el cual no cuenta con parámetros, y buscarCliente(in dni: long) y agregarcliente(in cliente: Cliente), que si cuentan con parámetros.
